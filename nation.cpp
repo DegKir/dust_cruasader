@@ -28,4 +28,11 @@ int Nation::get_soldiers()
 {
     return soldiers_;
 }
-void Nation::colonize() {}
+std::vector<Land> Nation::get_territory()
+{
+    return territory_;
+}
+void Nation::set_territory(std::vector<Land> new_territory)
+{
+    territory_=new_territory;
+}
