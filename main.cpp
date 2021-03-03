@@ -1,20 +1,37 @@
 #include <iostream>
 #include <string>
 #include "nation.hpp"
-
+#include <chrono>
 using namespace std;
 
 void fight(Nation , Nation );
+void init();
+void update();
+void render();
+vector<Nation> nations;
 
 int main()
 {
-    Nation A("France");
-    Nation B("Germany");
-    A.set_soldiers(5000);
-    B.set_soldiers(1000);
-    fight(A, B);
+
+    return 0;
 }
 
+void init()
+{
+    Nation A("German");
+    Nation B("France");
+    nations.push_back(A);
+    nations.push_back(B);
+}
+
+void update()
+{
+    for (int i; i< 2;i++)
+    {
+        nations[i].collect_gold();
+        nations[i].buy_soldiers();
+    }
+}
 void fight(Nation A, Nation B)
 {
     if(A.get_soldiers()>B.get_soldiers())

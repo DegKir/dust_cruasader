@@ -13,6 +13,9 @@ public:
     Nation(std::string);
     void set_gold(int );
     int get_gold();
+    void add_gold(int);
+    void collect_gold();
+    void buy_soldiers();
     void set_soldiers(int );
     int get_soldiers();
     std::string get_name();

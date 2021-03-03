@@ -16,10 +16,23 @@ void Nation::lose()
 
 void Nation::set_gold(int gold)
 {
+    
 }
+void Nation::add_gold(int gold)
+{
+    gold_+=gold;
+}
+
+void Nation::collect_gold()
+{
+    for (auto i: territory_)
+        add_gold(i.get_tax());
+}
+
 int Nation::get_gold()
 {
 }
+
 void Nation::set_soldiers(int soldiers)
 {
     soldiers_=soldiers;
